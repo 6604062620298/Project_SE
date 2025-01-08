@@ -104,27 +104,27 @@ export default function RootLayout({ children }) {
               {/* Sidebar Menu */}
               <li className="w-full">
                 <Link href="/" className="hover:bg-base-300 rounded-lg">
-                  หน้าแรก
-                </Link>
-              </li>
-              <li className="w-full">
-                <Link href="/about" className="hover:bg-base-300 rounded-lg">
-                  เกี่ยวกับเรา
-                </Link>
-              </li>
-              <li className="w-full">
-                <Link href="/contact" className="hover:bg-base-300 rounded-lg">
-                  ติดต่อเรา
+                  Home
                 </Link>
               </li>
               <li className="w-full">
                 <Link href="/Payment" className="hover:bg-base-300 rounded-lg">
-                  ชำระเงิน
+                  Bills
+                </Link>
+              </li>
+              <li className="w-full">
+                <Link href="/Chat" className="hover:bg-base-300 rounded-lg">
+                  Chat
+                </Link>
+              </li>
+              <li className="w-full">
+                <Link href="/Report" className="hover:bg-base-300 rounded-lg">
+                  Report
                 </Link>
               </li>
               <div className="pt-72">
                 <button className="btn btn-outline btn-primary">
-                  <Link href='Login'>Login</Link>
+                  <Link href='/Login'>Login</Link>
                 </button>
               </div>
 
