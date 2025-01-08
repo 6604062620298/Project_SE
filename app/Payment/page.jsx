@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 
 function page() {
   return (
@@ -17,8 +18,10 @@ function page() {
             <p className='mb-6'>ค่าห้อง: 3200</p>
             <p className="font-bold text-2xl">รวม : 4230 บาท</p>
             <div className="card-actions justify-end mt-4">
-              <button className="btn btn-secondary">เลือกวิธีจ่าย</button>
-              <button className="btn btn-accent">พิมพ์บิล</button>
+              <Link href ='/Choose_payment'>
+              <button  className="btn btn-secondary">เลือกวิธีจ่าย</button>
+              </Link>
+              
             </div>
           </div>
         </div>

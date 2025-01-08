@@ -117,6 +117,11 @@ export default function RootLayout({ children }) {
                   ติดต่อเรา
                 </Link>
               </li>
+              <li className="w-full">
+                <Link href="/Payment" className="hover:bg-base-300 rounded-lg">
+                  ชำระเงิน
+                </Link>
+              </li>
               <div className="pt-72">
                 <button className="btn btn-outline btn-primary">
                   <Link href='Login'>Login</Link>
