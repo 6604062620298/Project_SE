@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function page() {
   return (
-    <div className="p-6 bg-base-200 min-h-screen">
+    <div className="p-6 min-h-screen">
       <h1 className="text-4xl font-bold text-primary mb-6">Bills</h1>
       <div className="space-y-4">
 
