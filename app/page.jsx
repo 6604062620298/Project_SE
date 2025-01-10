@@ -3,10 +3,10 @@ import Link from "next/link";
 function Page() {
   return (
     <>
-      <div className='flex justify-center mt-10 p-14'>
+      <div className='flex justify-center mt-5'>
         <div className='sm:px-10 md:px-20 lg:px-40'>
           <Link href='/Payment'>
-          <button className="flex flex-col items-center justify-center border-2 border-red-300 rounded-xl text-center p-7 px-20 shadow-lg hover:bg-gradient-to-r hover:from-red-200 hover:to-red-100 transition duration-300">
+          <button className="flex bg-base-100 flex-col items-center justify-center border-2 border-red-300 rounded-xl text-center p-7 px-20 shadow-lg hover:bg-gradient-to-r hover:from-red-200 hover:to-blue-200 transition duration-300">
             <h1 className="text-lg sm:text-3xl font-bold text-red-500">
               <span className="mr-2"></span>ค่าเช่าห้องพัก
             </h1>
@@ -21,8 +21,8 @@ function Page() {
         </div>
       </div>
 
-      <div className="flex justify-center mt-10">
-        <div role="tablist" className="tabs tabs-lifted w-full max-w-[1400px] mx-auto text-lg pb-32">
+      <div className="flex justify-center mt-5">
+        <div role="tablist" className="tabs tabs-lifted w-full max-w-[1800px] mx-auto text-lg pb-32">
           {/* Tab 1 */}
           <input
             type="radio"
@@ -35,29 +35,8 @@ function Page() {
             role="tabpanel"
             className="tab-content bg-base-100 border-base-300 rounded-box p-6 text-lg shadow-lg"
           >
-            <div className='mb-4 flex items-center'>
+            <div className='mb-4 flex items-center text-base-content'>
               <span className="mr-2">🎄</span>Merry Christmas: มีขนมแจกฟรีที่ lobby ช่วยกินหน่อย
-            </div>
-            <div className='mb-4 flex items-center'>
-              <span className="mr-2">💡</span>ไฟชั้นสองเสีย: กลับไปอยู่ยุคหินซะ จนกว่าช่างจะมา
-            </div>
-            <div className='mb-4 flex items-center'>
-              <span className="mr-2">💡</span>ไฟชั้นสองเสีย: กลับไปอยู่ยุคหินซะ จนกว่าช่างจะมา
-            </div>
-            <div className='mb-4 flex items-center'>
-              <span className="mr-2">💡</span>ไฟชั้นสองเสีย: กลับไปอยู่ยุคหินซะ จนกว่าช่างจะมา
-            </div>
-            <div className='mb-4 flex items-center'>
-              <span className="mr-2">💡</span>ไฟชั้นสองเสีย: กลับไปอยู่ยุคหินซะ จนกว่าช่างจะมา
-            </div>
-            <div className='mb-4 flex items-center'>
-              <span className="mr-2">💡</span>ไฟชั้นสองเสีย: กลับไปอยู่ยุคหินซะ จนกว่าช่างจะมา
-            </div>
-            <div className='mb-4 flex items-center'>
-              <span className="mr-2">💡</span>ไฟชั้นสองเสีย: กลับไปอยู่ยุคหินซะ จนกว่าช่างจะมา
-            </div>
-            <div className='mb-4 flex items-center'>
-              <span className="mr-2">💡</span>ไฟชั้นสองเสีย: กลับไปอยู่ยุคหินซะ จนกว่าช่างจะมา
             </div>
             
           </div>
@@ -73,7 +52,7 @@ function Page() {
           />
           <div
             role="tabpanel"
-            className="tab-content bg-base-100 border-base-300 rounded-box p-6 text-lg shadow-lg"
+            className="tab-content bg-base-100 text-base-content border-base-300 rounded-box p-6 text-lg shadow-lg"
           >
             📝 รายละเอียดเพิ่มเติมใน Tab 2
           </div>
@@ -88,7 +67,7 @@ function Page() {
           />
           <div
             role="tabpanel"
-            className="tab-content bg-base-100 border-base-300 rounded-box p-6 text-lg shadow-lg"
+            className="tab-content bg-base-100 text-base-content border-base-300 rounded-box p-6 text-lg shadow-lg"
           >
             📦 ข้อมูล Tab 3
           </div>
