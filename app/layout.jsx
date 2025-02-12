@@ -98,9 +98,21 @@ export default function RootLayout({ children }) {
                     tabIndex={0}
                     className="dropdown-content menu bg-base-content text-base-100 rounded-box w-52 p-2 shadow"
                   >
-                    <li><a>Profile</a></li>
-                    <li><a>Settings</a></li>
-                    <li><a>Logout</a></li>
+                    <li>
+                      <Link href="/Login" className="hover:bg-info-content rounded-lg">
+                        Profile
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/Login" className="hover:bg-info-content rounded-lg">
+                        Setting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/Login" className="hover:bg-info-content rounded-lg">
+                        Logout
+                      </Link>
+                    </li>
                   </ul>
 
                 </div>
