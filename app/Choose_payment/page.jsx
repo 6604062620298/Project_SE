@@ -1,9 +1,24 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 function Page() {
   const router = useRouter();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  const handleUpload = () => {
+    if (selectedFile) {
+      alert(`Uploaded: ${selectedFile.name}`);
+      setIsModalOpen(false);
+    } else {
+      alert('กรุณาเลือกไฟล์ก่อนอัพโหลด');
+    }
+  };
 
   return (
     <div className="p-6 bg-base-200 min-h-screen flex items-center justify-center">
@@ -30,12 +45,38 @@ function Page() {
             >
               ← ย้อนกลับ
             </button>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md">
-              ชำระเงินทันที
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md"
+            >
+              อัพโหลดสลิป
             </button>
           </div>
         </div>
       </div>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-96 text-center">
+            <h2 className="text-2xl font-bold mb-4">อัพโหลดสลิป</h2>
+            <input type="file" accept="image/*" onChange={handleFileChange} className="mb-4" />
+            <div className="flex justify-center gap-4">
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full"
+              >
+                ยกเลิก
+              </button>
+              <button
+                onClick={handleUpload}
+                className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full"
+              >
+                อัพโหลด
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
