@@ -35,7 +35,7 @@ function Page() {
             />
           </div>
           <div className="text-lg font-medium text-gray-700">
-            <p>💳 <span className="font-semibold">ธนาคาร:</span> ออมสิน</p>
+            <p>💳 <span className="font-semibold">ธนาคาร:</span> กสิกร</p>
             <p>🏦 <span className="font-semibold">เลขบัญชี:</span> 020-100-625-777</p>
           </div>
           <div className="flex justify-center gap-4 mt-4">
