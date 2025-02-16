@@ -160,12 +160,18 @@ export default function RootLayout({ children }) {
                   Report
                 </Link>
               </li>
-              <div className="pt-72">
-                <button className="btn btn-outline btn-primary">
-                  <Link href='/Login'>Login</Link>
-                </button>
+              <div className="space-x-1 flex items-baseline">
+                <div className="pt-36">
+                  <button className="btn btn-outline btn-primary">
+                    <Link href='/Login'>Login</Link>
+                  </button>
+                </div>
+                <div className="pt-5">
+                  <button className="btn btn-outline btn-primary">
+                    <Link href='/Register'>Register</Link>
+                  </button>
+                </div>
               </div>
-
             </ul>
           </div>
         </div>
