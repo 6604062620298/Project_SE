@@ -1,55 +1,96 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
-export default function Home() {
+export default function Register() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const submit = async (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !password || !confirmPassword) {
+      setError("Please complete all input fields.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
+      return;
+    }
+  };
+  try{
+    
+  }catch{
+
+  }
+
   return (
-    <>
-      <div
-        className="hero min-h-screen"
-        style={{ backgroundImage: "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)" }}
-      >
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="card bg-base-100 bg-opacity-50 w-full max-w-sm shrink-0 shadow-2xl m-56 border-1">
-            <form className="card-body">
-              <div className="form-control">
-                <h1 className="text-center text-3xl font-bold pb-5 text-white">Register</h1>
+    <div
+      className="hero min-h-screen"
+      style={{ backgroundImage: "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)" }}
+    >
+      <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="card bg-base-100 bg-opacity-50 w-full max-w-sm shrink-0 shadow-2xl m-56 border-1">
+          <form className="card-body" onSubmit={submit}>
+            <h1 className="text-center text-3xl font-bold pb-5 text-black">Register</h1>
 
-                <label className="label">
-                  <span className="label-text text-white">Username</span>
-                </label>
-                <input type="email" placeholder="Username" className="input input-bordered" required />
+            {error && <p className="text-red-500 text-center">{error}</p>}
+            
+            {/* //Username */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-black">Username</span>
+              </label>
+              <input onChange={(e) => setName(e.target.value)} type="text" placeholder="Username" className="input input-bordered" required />
+            </div>
 
-                <label className="label">
-                  <span className="label-text text-white">Email</span>
-                </label>
-                <input type="email" placeholder="Email" className="input input-bordered" required />
+            {/* //email */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-black">Email</span>
+              </label>
+              <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" className="input input-bordered" required />
+            </div>
 
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-white">Password</span>
-                </label>
-                <input type="password" placeholder="password" className="input input-bordered" required />
-                <label className="label pt-4">
-                  <label className="label-text-alt text-white">
-                    <input type="checkbox"/> Remember me
-                  </label>
-                  <a href="#" className="label-text-alt link link-hover text-white">Forgot password?</a>
-                </label>
-              </div>
-              <div className="form-control mt-6">
-                <button className="btn glass text-white">Sign up</button>
-              </div>
-              <div>
-                <h3 className="text-center label-text-alt py-2">
-                  You have an account?
-                  <a href="/Register" className="font-bold ps-2 text-white">Login</a>
-                </h3>
-              </div>
-            </form>
-          </div>
+            {/* //password */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-black">Password</span>
+              </label>
+              <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" className="input input-bordered" required />
+            </div>
+
+            {/* //confirmPassword */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-black">Confirm Password</span>
+              </label>
+              <input onChange={(e) => setConfirmPassword(e.target.value)} type="password" placeholder="Confirm Password" className="input input-bordered" required />
+            </div>
+
+            <div className="form-control">
+              <label className="label pt-4">
+                <input type="checkbox" /> <span className="label-text-alt text-black">Remember me</span>
+                <a href="#" className="label-text-alt link link-hover text-black">Forgot password?</a>
+              </label>
+            </div>
+
+            <div className="form-control mt-6">
+              <button type="submit" className="btn glass text-black">Sign up</button>
+            </div>
+
+            <h3 className="text-center label-text-alt py-2">
+              Already have an account? <Link href="/Register" className="font-bold ps-2 text-black">Login</Link>
+            </h3>
+          </form>
         </div>
       </div>
-    </>
+    </div>
   );
 }
